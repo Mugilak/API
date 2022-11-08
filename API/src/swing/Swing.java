@@ -46,7 +46,7 @@ public class Swing extends JFrame implements ListSelectionListener {
 
 		frame.add(panel);
 
-		frame.show();
+		frame.setVisible(true);
 	}
 
 	@Override
@@ -54,25 +54,31 @@ public class Swing extends JFrame implements ListSelectionListener {
 		switch (a.getSelectedValue().toString()) {
 		case "page":
 			b.setVisible(false);
+			ans.setVisible(true);
 			ans.setText(((Integer) detail.getPage()).toString());
 			break;
 		case "per page":
 			b.setVisible(false);
+			ans.setVisible(true);
 			ans.setText(((Integer) detail.getPer_page()).toString());
 			break;
 		case "total":
 			b.setVisible(false);
+			ans.setVisible(true);
 			ans.setText(((Integer) detail.getTotal()).toString());
 			break;
 		case "total pages":
 			b.setVisible(false);
+			ans.setVisible(true);
 			ans.setText(((Integer) detail.getTotal_pages()).toString());
 			break;
 		case "Data":
+			ans.setVisible(false);
 			b.setVisible(true);
 			break;
 		case "Support":
 			b.setVisible(false);
+			ans.setVisible(true);
 			ans.setText(detail.getSupport().getText() + " \n" + detail.getSupport().getUrl());
 			break;
 		}
